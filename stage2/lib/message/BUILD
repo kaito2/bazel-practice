@@ -6,6 +6,6 @@ go_library(
         "hello.go",
     ],
     importpath = "github.com/kaito2/bazel-practice/stage2/lib/message",
-    # visibility = ["//visibility:public"]
-    visibility = ["//app/cmd:__pkg__"],
+    visibility = ["//visibility:public"]
+    # visibility = ["//app/cmd:__pkg__"],
 )
