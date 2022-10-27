@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "app1_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/kaito2/bazel-practice/gazelle1/app1",
+    visibility = ["//visibility:private"],
+    deps = ["@com_github_logrusorgru_aurora_v4//:go_default_library"],
+)
+
+go_binary(
+    name = "app1",
+    embed = [":app1_lib"],
+    visibility = ["//visibility:public"],
+)
